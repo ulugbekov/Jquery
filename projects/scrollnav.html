@@ -1,0 +1,110 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scroll</title>
+<link type="text/css" rel="stylesheet" media="screen" href="/assets/application.css?body=1">
+<script type="text/javascript" src="../assets/jquery-1.7.js"></script>
+<script type="text/javascript" src="../assets/jquery.easing.1.2.js"></script>
+<script type="text/javascript" src="../assets/jquery.localScroll-1.2.7/jquery.scrollTo.js"></script>
+<script type="text/javascript" src="../assets/jquery.localScroll-1.2.7/jquery.localscroll.js"></script>
+<script type="text/javascript" src="../assets/jquery.serialScroll-1.2.2/jquery.serialScroll.js"></script>
+<script type="text/javascript" src="../assets/jquery.serialScroll-1.2.2/jquery.scrollTo.js"></script>
+
+
+
+<script type="text/javascript" src="../assets/jquery-ui-1.8.16.custom/js/jquery-ui-1.8.16.custom.min.js"></script>
+<link type="text/css" rel="stylesheet" media="screen" href="./assets/jquery-ui-1.8.16.custom/css/ui-lightness/jquery-ui-1.8.16.custom.css">
+<script type="text/javascript" >
+
+$(document).ready(function() {
+
+	
+	
+	
+	$(window).scroll(function() {
+		
+	$('ul#navigation').scrollTo(100,'slow');
+	
+	});
+	
+	$("a").click(function() {
+		
+		$("ul").scrollTo('50%',800);
+		return false;
+	})
+	
+	
+	
+	
+});
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<style type='text/css'>
+div#navigation {
+height: 200px;
+width: 200px;
+background-color: red;
+position:relative;
+margin:0px;
+
+}
+
+
+div li {
+	float:left;
+	width:100px;
+}
+body {
+	margin:0px;
+}
+</style>
+
+</head>
+<body>
+<a href="#">Click</a>
+
+<div id="navigation">
+	<li>Hello</li>
+	<li>Hello</li><br />
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	<li>Hello</li>
+	
+</div>
+
+</body>
+</html>

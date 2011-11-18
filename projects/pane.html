@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scroll</title>
+<link type="text/css" rel="stylesheet" media="screen" href="/assets/application.css?body=1">
+<script type="text/javascript" src="../assets/jquery-1.7.js"></script>
+<script type="text/javascript" src="../assets/jquery.easing.1.2.js"></script>
+
+<script type="text/javascript" src="../assets/jquery-ui-1.8.16.custom/js/jquery-ui-1.8.16.custom.min.js"></script>
+<link type="text/css" rel="stylesheet" media="screen" href="./assets/jquery-ui-1.8.16.custom/css/ui-lightness/jquery-ui-1.8.16.custom.css">
+<script type="text/javascript" >
+
+$(document).ready(function() {
+	
+$('#bio > div').hide();
+
+$('#bio > div:first').show();
+	
+	
+	$('#bio h3').click(function() {
+	$(this).next().animate(
+	{'height':'toggle'}, 'slow', 'easeOutBounce'
+	);
+	});
+	
+	$('p:first').click(function(){
+		$(this).animate(
+	{
+	height: '+=100px',
+	backgroundColor: 'green'
+	},
+	{
+	duration: 'slow',
+	easing: 'swing',
+	complete: function() {alert('done!');},
+	queue: false
+	}
+	)
+	});
+	
+	$('p:first').hide().slideDown('slow').delay(2000).fadeOut();
+	
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<style type='text/css'>
+	h3 {
+		color: white;
+		margin:0px;
+		height:20px;
+		background-color: blue;
+		width: 200px;
+		border: 1px solid white;
+	}
+</style>
+
+</head>
+
+<p>Acitns  sbns sjhsbsmbbksb   jh kb bhjbhb bjhbb hbkh jbhb  jhbhvvvjvgjvjgvhjgvhgvghggvhvghvhgvhgv
+	Acitns  sbns sjhsbsmbbksb   jh kb bhjbhb bjhbb hbkh jbhb  jhbhvvvjvgjvjgvhjgvhgvghggvhvghvhgvhgv
+	Acitns  sbns sjhsbsmbbksb   jh kb bhjbhb bjhbb hbkh jbhb  jhbhvvvjvgjvjgvhjgvhgvghggvhvghvhgvhgv
+	Acitns  sbns sjhsbsmbbksb   jh kb bhjbhb bjhbb hbkh jbhb  jhbhvvvjvgjvjgvhjgvhgvghggvhvghvhgvhgv
+	v
+	</p>
+<div id="bio">
+<h2>Who's Hot Right Now?</h2>
+<h3>Beau Dandy</h3>
+<div>
+<img src="../images/beau_100.jpg" width="100"
+height="100" alt="Beau Dandy"/>
+<p>Content about Beau Dandy</p>
+</div>
+<h3>Johnny Stardust</h3>
+<div>
+<img src="../images/johnny_100.jpg" width="100"
+height="100" alt="Johny Stardust"/>
+<p>Content about Johny Stardust</p>
+</div>
+<h3>Glendatronix</h3>
+<div>
+<img src="../images/glenda_100.jpg" width="100"
+height="100" alt="Glendatronix"/>
+<p>Content about Glendatronix</p>
+</div>
+</div>
+</body>
+</html>

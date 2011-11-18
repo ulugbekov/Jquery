@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scroll</title>
+<link type="text/css" rel="stylesheet" media="screen" href="/assets/application.css?body=1">
+<script type="text/javascript" src="../assets/jquery-1.7.js"></script>
+<script type="text/javascript" src="../assets/jquery.easing.1.2.js"></script>
+
+<script type="text/javascript" src="../assets/jquery-ui-1.8.16.custom/js/jquery-ui-1.8.16.custom.min.js"></script>
+<link type="text/css" rel="stylesheet" media="screen" href="./assets/jquery-ui-1.8.16.custom/css/ui-lightness/jquery-ui-1.8.16.custom.css">
+<script type="text/javascript" >
+
+$(document).ready(function() {
+
+	$('<div id="navigation_blob"></div>').css({
+	width: $('#navigation li:first a').width() + 10,
+	height: $('#navigation li:first a').height() + 10
+	}).appendTo('#navigation');
+	
+	$('#navigation a').hover(function() {
+	// Mouse over function
+	$('#navigation_blob').animate(
+	{width: $(this).width() + 10, left: $(this).position().left},
+	{duration: 'slow', easing: 'easeOutElastic', queue: false}
+	);
+	}, function() {
+	// Mouse out function
+	
+	$('#navigation_blob')
+	.stop(true)
+	.animate(
+	{width: 'hide'},
+	{duration: 'slow', easing: 'easeOutCirc', queue: false}
+	)
+	.animate(
+	{width: 200},
+	'fast'
+	);
+	
+	
+	
+	
+	});
+	
+	
+	
+});
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<style type='text/css'>
+	h3 {
+		color: white;
+		margin:0px;
+		height:20px;
+		background-color: blue;
+		width: 200px;
+		border: 1px solid white;
+	}
+</style>
+
+</head>
+<body>
+
+
+	<ul id="navigation">
+	<li><a href="#">Home</a></li>
+	<li><a href="#">About Us</a></li>
+	<li><a href="#">Buy!</a></li>
+	<li><a href="#">Gift Ideas</a></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scroll</title>
+<link type="text/css" rel="stylesheet" media="screen" href="/assets/application.css?body=1">
+<script type="text/javascript" src="../assets/jquery-1.7.js"></script>
+<script type="text/javascript" src="../assets/jquery.easing.1.2.js"></script>
+
+<script type="text/javascript" src="../assets/jquery-ui-1.8.16.custom/js/jquery-ui-1.8.16.custom.min.js"></script>
+<link type="text/css" rel="stylesheet" media="screen" href="./assets/jquery-ui-1.8.16.custom/css/ui-lightness/jquery-ui-1.8.16.custom.css">
+<script type="text/javascript" >
+
+$(document).ready(function() {
+	
+	$('p').animate({
+	padding: '20px',
+	borderBottom: '3px solid #8f8f8f',
+	borderRight: '3px solid #bfbfbf'
+	}, 2000);
+	
+	$("p").resizable({handle:'e'}).draggable();
+	
+	$('#disclaimer').click(function() {
+	$(this).animate({'backgroundColor':'#ff9f5f'}, 2000);
+	})
+	
+	$('p:first').toggle(function() {
+	$(this).animate({'height':'+=150px'}, 1000, 'linear');
+	}, function() {
+	$(this).animate({'height':'-=150px'}, 1000, 'swing');
+	});
+	
+	$('p:first').animate({height: '+=300px'}, 2000, 'easeOutBounce');
+	$('p:first').animate({height: '-=300px'}, 2000, 'easeInOutExpo');
+	$('p:first').animate({height: 'hide'}, 2000, 'easeOutCirc');
+	$('p:first').animate({height: 'show'}, 2000, 'easeOutElastic');
+	
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<style type='text/css'>
+	p {
+		border: 2px solid red;
+	}
+</style>
+
+</head>
+<body>
+<h1 id="disclaimer">COme on Lets hide something</h1>
+<p>Hello Mamasita smams a s ad a sd as asdasd a sd sa d as dsa das d
+	dasda asdas d dasdasdsadasdasdasdas</p>
+	<p>Hello Mamasita smams a s ad a sd as asdasd a sd sa d as dsa das d
+		dasda asdas d dasdasdsadasdasdasdas</p>
+		<p>Hello Mamasita smams a s ad a sd as asdasd a sd sa d as dsa das d
+			dasda asdas d dasdasdsadasdasdasdas</p>
+			<p>Hello Mamasita smams a s ad a sd as asdasd a sd sa d as dsa das d
+				dasda asdas d dasdasdsadasdasdasdas</p>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scroll</title>
+<link type="text/css" rel="stylesheet" media="screen" href="/assets/application.css?body=1">
+<script type="text/javascript" src="../assets/jquery-1.7.js"></script>
+<script type="text/javascript" src="../assets/jquery.easing.1.2.js"></script>
+
+<script type="text/javascript" src="../assets/jquery-ui-1.8.16.custom/js/jquery-ui-1.8.16.custom.min.js"></script>
+<link type="text/css" rel="stylesheet" media="screen" href="./assets/jquery-ui-1.8.16.custom/css/ui-lightness/jquery-ui-1.8.16.custom.css">
+<script type="text/javascript" >
+
+$(document).ready(function() {
+
+	$('#navigation li').hover(
+	function() {
+	$(this)
+	.stop(true)
+	.animate(
+	{height: '60px'},
+	{duration: 500, easing: 'easeOutBounce'}
+	)
+	},
+	function() {
+	$(this)
+	.stop(true)
+	.animate(
+	{height:'20px'},
+	{duration: 500, easing: 'easeOutCirc'}
+	)
+	}
+	);
+	
+	
+});
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<style type='text/css'>
+#container {
+position: relative;
+}
+#navigation {
+position:absolute;
+width: inherit;
+top: 0;
+right: 0;
+margin: 0;
+}
+#navigation li {
+height:20px;
+float:left;
+list-style-type: none;
+width:70px;
+padding:3px;
+border-right:1px solid #3687AF;
+background-color: #015287;
+background-repeat: no-repeat;
+background-position: center 30px;
+}
+#navigation li a {
+color: #FFFFFF;
+}
+#navigation #home{
+background-image:url('icon_home.png');
+}
+</style>
+
+</head>
+<body>
+
+
+	<ul id="navigation">
+	<li><a href="#">Home</a></li>
+	<li><a href="#">About Us</a></li>
+	<li><a href="#">Buy!</a></li>
+	<li><a href="#">Gift Ideas</a></li>
+	</ul>
+</body>
+</html>
