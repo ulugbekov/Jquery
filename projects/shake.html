@@ -15,20 +15,43 @@
 $(document).ready(function() {
 
 	
+	$("#name").bind("keypress",function(e) {
+		if ($(this).val().length > 10 ) {
+		e.preventDefault() }
+		else if (e) {
+			
+			
+		}
+	})
 	
 	
-	
-	$('p:first')
+/*	$('p:first')
 	.effect('shake', {times:3}, 300)
 	.effect('highlight', {}, 3000)
 	.hide('explode', {}, 1000);
 	
+	*/
 	
+	$("div.error").live("anim", function() {
+		
+		$(this).html().length > 1
+	})
+
+	if ( $("div.error").html().length > 0 ) {
+		$(this).trigger('anim')
+ }
+	$("div.error").live("click",function() {
+		
+		$(this).clone().appendTo("div#main")
+	})
 	
 });
 	
-	
-	
+	function anim()
+ {
+	if ( $("div.error").html().length > 0 ) {
+		$("div.error").animate({opacity: 1, backgroundColor: 'yello', width: "200px"}, 3000) }
+}	
 	
 	
 
@@ -55,6 +78,9 @@ $(document).ready(function() {
 		width: 200px;
 		border: 1px solid white;
 	}
+	body {
+		height: 1200px;
+	}
 </style>
 
 </head>
@@ -63,5 +89,16 @@ $(document).ready(function() {
 <p>
 	dadasdasdasd dd asdadadada d adada d ad a adasda
 	</p>
+	
+	
+	<label for="name">name</label><input type="text" name="name" value="" id="name">
+	
+	
+		<div class="error"></div>
+	<div id="main">
+		<ul>
+		<li>12</li>
+		</ul>
+	</div>
 </body>
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scroll</title>
+<link type="text/css" rel="stylesheet" media="screen" href="/assets/application.css?body=1">
+<script type="text/javascript" src="../assets/jquery-1.7.js"></script>
+<script type="text/javascript" src="../assets/jquery.easing.1.2.js"></script>
+
+<script type="text/javascript" src="../assets/jquery-ui-1.8.16.custom/js/jquery-ui-1.8.16.custom.min.js"></script>
+<link type="text/css" rel="stylesheet" media="screen" href="./assets/jquery-ui-1.8.16.custom/css/ui-lightness/jquery-ui-1.8.16.custom.css"   />
+<script type="text/javascript" >
+$(function()  {
+var avtags=["Hello", "zbooks", "car", 'rent', 'cars']
+$("#search").autocomplete({ source: avtags})
+
+$("#country").change(function(event) {
+	console.log($(this).serialize())
+	
+})
+
+$("#track").change(function(event) {
+	
+	alert($(event.target).serialize())
+	$(event.target).css("background-color", 'blue' )
+})
+
+})
+
+
+</script>
+<style type='text/css'>
+body {
+	background:url("ready2.png" ) no-repeat;
+	background-position: 0px 0px;
+}
+	a {
+		margin:10px;
+		height:15px;
+		width:15px;
+		display:block;
+		background: url('ready2.png') no-repeat 0px 0px;
+	}
+	a:hover {
+		
+		
+		background-position: 0px -15px;
+	}
+	a:active {
+		
+		background-position: 0px -30px;
+	}
+</style>
+
+</head>
+<body>
+
+<img  src="ready2.png"   />
+	<ul id="navigation">
+	<li><a href="#"></a></li>
+	<li><a href="#"></a></li>
+	<li><a href="#"></a></li>
+	<li><a href="#"></a></li>
+	</ul>
+	<div id="track">
+	<select id="country" name="country" >
+		<option value="">Choose a state</option>
+		<option  value="CA" value="12331" >California</option>
+		<option  value="Al">Alabama</option>
+		<option  value="NY">NewYork</option>
+	</select>
+	</div>
+	<label for="search">
+		<input type="text"  id="search"  values="Search" name="search" />
+	</label>
+</body>
+</html>
